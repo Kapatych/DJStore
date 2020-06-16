@@ -1,0 +1,6 @@
+mixin nav({list})
+  nav.nav&attributes(attributes)
+    ul.nav__list
+      each value, index in list
+        li.nav__item(class = !index && 'nav__item--active')
+          a.nav__link(href='#' title=value)= value

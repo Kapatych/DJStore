@@ -1,0 +1,51 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.nav__list {
+  @include reset-list;
+  display: flex;
+}
+
+.nav__item {
+  position: relative;
+  display: flex;
+
+  &:not(:first-child) {
+    margin-left: 33px;
+  }
+
+  &--active, &:hover {
+    .nav__link {
+      font-weight: 600;
+      color: $primary-color;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 80%;
+      height: 3px;
+      background: $primary-color;
+    }
+  }
+}
+
+.nav__link {
+  padding: 33px 0;
+  color: rgba(43, 45, 58, 0.7);
+  text-decoration: none;
+
+  &:before {
+    display: block;
+    content: attr(title);
+    font-weight: 600;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+

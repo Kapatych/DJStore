@@ -1,3 +1,5 @@
+include ../../components/header/header
+
 doctype html
 html(lang='ru')
   head
@@ -28,4 +30,9 @@ html(lang='ru')
       link(rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon-180x180.png")
     title Test task for DJStore
   body
+    block header
+      +header({
+        logoImg: 'assets/img/logo.svg',
+        menuList: ['Главная', 'Проекты', 'Услуги', 'О компании', 'Готовые решения', 'Контакты']
+      })
     block content
