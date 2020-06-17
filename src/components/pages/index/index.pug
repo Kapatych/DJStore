@@ -1,0 +1,9 @@
+include ../../slider/slider
+include ../../feature/feature
+
+mixin index({slider, feature})
+  main.main
+    section.home-slider
+      +slider(slider)
+    +feature(feature)
+

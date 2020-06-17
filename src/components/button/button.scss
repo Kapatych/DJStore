@@ -1,0 +1,22 @@
+@import "../../scss/variables";
+
+.button {
+  cursor: pointer;
+  border-radius: 8px;
+  color: $light-100;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button--filled {
+  padding: 14px 24px;
+  background: $primary-color;
+  border: 0;
+  box-shadow: 0 6px 24px rgba(85, 104, 255, 0.12);
+}
+
+.button--ghost {
+  padding: 13px 18px;
+  background: transparent;
+  border: 1px solid $light-100;
+}

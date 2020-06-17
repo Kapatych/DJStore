@@ -1,0 +1,16 @@
+mixin hotspot({offsetX, offsetY, tooltip = false})
+  .hotspot&attributes(attributes)(class = tooltip && 'js-hotspot' style = `top: ${offsetY}; left: ${offsetX}`)
+    button.hotspot__button(type='button' class = tooltip && 'hotspot__button--active')
+    if tooltip
+      .hotspot__tooltip
+        button.hotspot__close(type='button')
+        .hotspot__content
+          .hotspot__heading
+            p.hotspot__title= tooltip.title
+            if tooltip.icon
+              img.hotspot__icon(src=`assets/img/${tooltip.icon}` alt='Icon')
+          ul.hotspot__list
+            each item in tooltip.list
+              li.hotspot__item
+                span.hotspot__item-dot
+                span.hotspot__item-text= item

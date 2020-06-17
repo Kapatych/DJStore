@@ -1,0 +1,11 @@
+include ../hotspot/hotspot
+
+mixin feature({title, img, hotspots})
+  section.feature&attributes(attributes)
+    .feature__container
+      .feature__left
+        img(src=`assets/img/${img.product}` alt=title)
+      .feature__right
+        img(src=`assets/img/${img.interior}` alt=title)
+        each hotspot in hotspots
+          +hotspot(hotspot)

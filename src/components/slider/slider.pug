@@ -1,0 +1,22 @@
+include ../button/button
+
+mixin slider({main, help})
+  div.home-slider
+    div.owl-carousel.main-slider
+      each item in main
+        div.main-slider__item(style=`background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(assets/img/${item.img})`)
+          .container
+            div.main-slider__content
+              p.main-slider__subtitle= item.subtitle
+              p.main-slider__title= item.title
+              p.main-slider__text= item.text
+              div.main-slider__button-group
+                +button({text: 'Обратный звонок'})(class = 'button--ghost')
+                +button({text: 'Заполнить бриф'})(class = 'button--filled')
+    div.help-slider-wrapper
+      div.owl-carousel.help-slider
+        each value, index in help
+          div.help-slider__item
+            div.help-slider__content
+              p.help-slider__num= index < 10 ? "0" + (index + 1) : index + 1
+              p.help-slider__text= value
