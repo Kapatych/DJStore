@@ -1,8 +1,12 @@
 include ../logo/logo
 include ../nav/nav
+include ../contacts/contacts
 
-mixin header({logoImg, menuList})
+mixin header({logoImg, menuList, contacts})
   header.header
     .header__container.container
       +logo({src: logoImg})(class = 'header__logo')
       +nav({list: menuList})(class = 'header__nav')
+      +contacts(contacts)(class='header__contacts')
+
+

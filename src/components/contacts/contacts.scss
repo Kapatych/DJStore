@@ -1,0 +1,39 @@
+@import "../../scss/variables";
+
+.contacts__container {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:first-child) {
+    margin-left: 19px;
+  }
+}
+
+.contacts__icon {
+  margin-right: 8px;
+}
+
+.contacts__link {
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  color: $dark;
+}
+
+.contacts__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__callback {
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 13px;
+  color: $primary-color;
+}

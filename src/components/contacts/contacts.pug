@@ -1,0 +1,11 @@
+mixin contacts({mail, phone})
+  .contacts&attributes(attributes)
+    .contacts__container
+      .contacts__item
+        img.contacts__icon(src='assets/img/icon-mail.svg' width=24 height=24)
+        a.contacts__link(href=`mailto:${mail}`)= mail
+      .contacts__item
+        img.contacts__icon(src='assets/img/icon-phone.svg' width=24 height=24)
+        div.contacts__group
+          a.contacts__callback(href='/') Обратный звонок
+          a.contacts__link(href=`tel:${phone.replace(/[() -]*/g, '')}`)= phone
