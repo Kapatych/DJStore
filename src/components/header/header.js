@@ -12,7 +12,6 @@ class Header {
   selectProperties() {
     this.burgerButton = this.header.querySelector('.header__burger');
     this.nav = this.header.querySelector('.header__nav');
-    // this.overlay = this.header.querySelector('.header__overlay');
   }
 
   setListeners() {
@@ -21,7 +20,6 @@ class Header {
 
   toggleMenu() {
     this.nav.classList.toggle('header__nav--open');
-    // this.overlay.classList.toggle('header__overlay--active');
     document.body.classList.toggle('hold');
     this.burgerButton.classList.toggle('header__burger--open');
   }

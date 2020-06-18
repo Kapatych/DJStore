@@ -1,7 +1,6 @@
 @import "../../scss/variables";
 @import "../../scss/mixins";
 
-
 .modal {
   position: fixed;
   top: 0;
@@ -29,10 +28,6 @@
   background: $light-100;
   border-radius: 12px;
   z-index: 200;
-}
-
-.modal__close {
-
 }
 
 .modal__underlay {

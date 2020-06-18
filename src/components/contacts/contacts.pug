@@ -3,7 +3,7 @@ mixin contacts({mail, phone})
     .contacts__container
       .contacts__item
         img.contacts__icon(src='assets/img/icon-phone.svg' width=24 height=24)
-        div.contacts__group
+        .contacts__group
           button.contacts__callback.modal-trigger(type='button' data-trigger = 'callback') Обратный звонок
           a.contacts__link(href=`tel:${phone.replace(/[() -]*/g, '')}`)= phone
       .contacts__item
