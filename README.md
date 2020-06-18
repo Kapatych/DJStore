@@ -4,7 +4,7 @@
 
 ## Screenshots
 
-![Screenshot](https://user-images.githubusercontent.com/58704804/85069866-7c442f00-b1bd-11ea-9204-abe9f02fc52b.png)
+![Screenshot (1)](https://user-images.githubusercontent.com/58704804/85069997-b4e40880-b1bd-11ea-918e-44b9ba7dcd38.png)
 
 ## Features
 
