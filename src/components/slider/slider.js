@@ -13,6 +13,16 @@ mainSlider.owlCarousel({
   touchDrag: false,
   animateIn: 'fadeIn',
   animateOut: 'fadeOut',
+  responsive: {
+    0: {
+      autoplay: true,
+      autoplayTimeout: 2500,
+      autoplayHoverPause: true
+    },
+    992: {
+      autoplay: false
+    }
+  }
 });
 
 helpSlider.owlCarousel({

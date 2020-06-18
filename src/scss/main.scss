@@ -1,6 +1,7 @@
 @import "~normalize.css";
 @import "fonts";
 @import "variables";
+@import "mixins";
 
 html {
   font-family: 'Montserrat', 'Open Sans', sans-serif;
@@ -56,6 +57,16 @@ p {
 
 .container {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 16px;
   max-width: 1200px;
+}
+
+.hold {
+  overflow: hidden;
+}
+
+@include tablet-landscape-up {
+  .container {
+    padding: 0 30px;
+  }
 }

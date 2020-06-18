@@ -33,7 +33,13 @@ html(lang='ru')
     block header
       +header({
         logoImg: 'assets/img/logo.svg',
-        menuList: ['Главная', 'Проекты', 'Услуги', 'О компании', 'Готовые решения', 'Контакты'],
+        menuList: [
+          {label: 'Главная', icon: 'icon-home'},
+          {label: 'Проекты', icon: 'icon-projects'},
+          {label: 'Услуги', icon: 'icon-services'},
+          {label: 'О компании', icon: 'icon-company'},
+          {label: 'Готовые решения', icon: 'icon-solutions'},
+          {label: 'Контакты', icon: 'icon-contacts'}],
         contacts: {mail: 'info@sld-store.ru', phone: '8 812 615-62-79'}
       })
     block content

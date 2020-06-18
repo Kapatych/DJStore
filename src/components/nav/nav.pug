@@ -1,6 +1,18 @@
+include ../button/button
+
 mixin nav({list})
   nav.nav&attributes(attributes)
     ul.nav__list
       each value, index in list
         li.nav__item(class = !index && 'nav__item--active')
-          a.nav__link(href='#' title=value)= value
+          a.nav__link(href='#' title=value.label)
+            img.nav__link-icon(src = `assets/img/${value.icon}.svg`)
+            span.nav__link-text= value.label
+    .mobile-brief
+      +button({text: 'Заполнить бриф'})(class = 'button button--filled button--wide')
+    .mobile-contacts
+      .mobile-contacts__title Напишите нам
+      .mobile-contacts__mail
+        img.contacts__icon(src='assets/img/icon-mail.svg' width=24 height=24)
+        a.mobile-contacts__link(href='mailto:info@sld-store.ru') info@sld-store.ru
+
