@@ -1,0 +1,10 @@
+include ../../components/button/button
+
+mixin modal()
+  .modal.js-modal&attributes(attributes)
+    .modal__underlay
+    .modal__container
+      +button({text: ''})(class = 'modal__close button button--close')
+      .modal__content
+        block
+

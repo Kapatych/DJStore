@@ -1,9 +1,12 @@
 include ../../slider/slider
 include ../../feature/feature
+include ../../modal/modal
+include ../../callback/callback
 
 mixin index({slider, feature})
   main.main
     section.home-slider
       +slider(slider)
     +feature(feature)
-
+    +modal()
+      +callback()

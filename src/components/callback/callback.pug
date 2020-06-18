@@ -1,0 +1,19 @@
+include ../button/button
+
+mixin callback()
+  .callback.js-callback
+    form.callback__form.callback__form--active(action = '')
+      p.callback__title Готовы обсудить проект?
+      p.callback__subtitle Заполните форму ниже и мы свяжемся с вами.
+      input.callback__input(type='text' name='name' placeholder="Имя*" autocomplete="off" required)
+      input.callback__input(type='tel' name='tel' placeholder="Телефон*" autocomplete="off" required)
+      label.callback__deal
+        input.callback__input.hidden(type='checkbox' required)
+        span.callback__deal-icon
+        span.callback__deal-text Я согласен с условиями обработки
+          a.callback__deal-link(href='/' target='_blank')  персональных данных
+      +button({type: 'submit', text: 'Отправить'})(class = 'button--filled button--wide')
+    .callback__success
+      .callback__success-icon
+      p.callback__success-text Ваша заявка успешно отправлена. Ожидайте звонка в ближайшее время!
+      +button({text: 'Ок'})(class = 'button--filled button--wide modal__close')

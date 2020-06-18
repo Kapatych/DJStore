@@ -1,9 +1,11 @@
+include ../../components/button/button
+
 mixin hotspot({offsetX, offsetY, tooltip = false})
   .hotspot&attributes(attributes)(class = tooltip && 'js-hotspot' style = `top: ${offsetY}; left: ${offsetX}`)
     button.hotspot__button(type='button' class = tooltip && 'hotspot__button--active')
     if tooltip
       .hotspot__tooltip
-        button.hotspot__close(type='button')
+        +button({text: ''})(class = 'hotspot__close button button--close')
         .hotspot__content
           .hotspot__heading
             p.hotspot__title= tooltip.title

@@ -1,0 +1,137 @@
+@import "../../scss/variables";
+
+
+.callback__form {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.callback__title {
+  margin-bottom: 12px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.callback__subtitle {
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.callback__input {
+  padding: 12px;
+  margin-bottom: 16px;
+  width: 100%;
+  border-radius: 9px;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+
+  &:hover, &:focus {
+    border: 1px solid $primary-color;
+  }
+
+  &::placeholder {
+    color: rgba(43, 45, 58, 0.5);
+  }
+}
+
+.callback__deal {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover .callback__deal-icon {
+    border: 1px solid $primary-color;
+  }
+}
+
+.callback__deal-icon {
+  margin-right: 8px;
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.callback__input:focus + .callback__deal-icon {
+  border: 1px solid $primary-color;
+}
+
+.callback__input:checked + .callback__deal-icon {
+  background: #EBEEF5;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    display: block;
+    background: url("../img/icon-check.svg");
+  }
+}
+
+.callback__deal-text {
+  font-size: 9px;
+  line-height: 11px;
+}
+
+.callback__deal-link {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+
+// Success
+
+.callback__success {
+  display: none;
+
+  &--active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.callback__success-icon {
+  position: relative;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  border: 1px solid $primary-color;
+  background: #F2F4F7;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 62px;
+    height: 62px;
+    background: url("../img/icon-check-white.svg") no-repeat center center, $primary-color;
+    border-radius: 50%;
+    border: 1px solid $primary-color;
+  }
+}
+
+.callback__success-text {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 23px;
+}

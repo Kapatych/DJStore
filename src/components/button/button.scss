@@ -20,3 +20,26 @@
   background: transparent;
   border: 1px solid $light-100;
 }
+
+.button--close {
+  position: absolute;
+  padding: 0;
+  top: 16px;
+  right: 16px;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 0;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("../img/icon-close.svg");
+  }
+}
+
+.button--wide {
+  width: 100%;
+}

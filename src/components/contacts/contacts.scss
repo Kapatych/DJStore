@@ -32,8 +32,11 @@
 }
 
 .contacts__callback {
-  text-decoration: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
   font-size: 11px;
   line-height: 13px;
   color: $primary-color;
+  cursor: pointer;
 }

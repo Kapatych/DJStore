@@ -71,26 +71,6 @@
   }
 }
 
-.hotspot__close {
-  position: absolute;
-  padding: 0;
-  top: 12px;
-  right: 16px;
-  width: 14px;
-  height: 14px;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-
-  &:before {
-    content: '';
-    display: block;
-    width: 14px;
-    height: 14px;
-    background: url("../img/icon-close.svg");
-  }
-}
-
 .hotspot__heading {
   display: flex;
   justify-content: space-between;
@@ -120,6 +100,7 @@
   display: flex;
   align-items: center;
 }
+
 .hotspot__item-dot {
   margin-right: 8px;
   width: 16px;
