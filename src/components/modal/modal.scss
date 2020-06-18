@@ -1,4 +1,5 @@
 @import "../../scss/variables";
+@import "../../scss/mixins";
 
 
 .modal {
@@ -38,4 +39,11 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0,0,0,.7);
+}
+
+@include tablet-landscape-up {
+  .modal__container {
+    padding: 32px 42px 48px;
+    width: 538px;
+  }
 }
